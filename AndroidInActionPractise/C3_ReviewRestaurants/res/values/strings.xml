@@ -3,5 +3,6 @@
 
     <string name="hello">Hello World, ReviewCriteria!</string>
     <string name="app_name">C3_ReviewRestaurants</string>
+    <string name="button1">Get Reviews</string>
 
 </resources>
