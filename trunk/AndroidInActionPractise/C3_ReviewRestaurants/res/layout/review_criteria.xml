@@ -16,13 +16,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/lbl2" />
-
+
     <EditText
-        android:id="@+id/text_location"
+        android:id="@+id/location"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
         <requestFocus />
+
     </EditText>
 
     <TextView
@@ -30,5 +31,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cuisine" />
+
+    <Spinner
+        android:id="@+id/cuisine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button1" />
 	
 </LinearLayout>
