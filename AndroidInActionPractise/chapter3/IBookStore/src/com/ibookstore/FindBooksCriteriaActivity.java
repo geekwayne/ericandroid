@@ -19,7 +19,7 @@ public class FindBooksCriteriaActivity extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
+	 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.findbooks_criteria_activity);
 		
@@ -33,6 +33,14 @@ public class FindBooksCriteriaActivity extends Activity {
 		adapter_bookCategories.setDropDownViewResource(R.layout.spinner_view_dropdown);
 		
 		this.spinner_book_category.setAdapter(adapter_bookCategories);
+		
+		this.btn_findBooks.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View paramView) {
+				 
+			}
+		});
 		
 	}
 	
