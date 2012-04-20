@@ -13,15 +13,14 @@ import android.widget.Button;
 
 public class IBookStoreActivity extends Activity {
 
-	private Button btn_findBooks;
-
-	/** Called when the activity is first created. */
+	private Button btn_go_findBooksCriteria;
+ 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ibookstore_activity);
-		btn_findBooks = (Button) findViewById(R.id.btn_findBooks);
-		btn_findBooks.setOnClickListener(new OnClickListener() {
+		btn_go_findBooksCriteria = (Button) findViewById(R.id.btn_go_findBooksCriteria);
+		btn_go_findBooksCriteria.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
