@@ -11,6 +11,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
@@ -93,7 +94,7 @@ public class ReviewFetcher {
         ArrayList<Review> results = null;
 
         try {
-            URL url = new URL(this.query);
+          /*  URL url = new URL(this.query);
             SAXParserFactory spf = SAXParserFactory.newInstance();
             SAXParser sp = spf.newSAXParser();
             XMLReader xr = sp.getXMLReader();
@@ -103,7 +104,23 @@ public class ReviewFetcher {
 
             xr.parse(new InputSource(url.openStream()));
             // after parsed, get record
-            results = handler.getReviews();
+            results = handler.getReviews();*/
+        	
+        	results = new ArrayList<Review>();
+        	for (int i = 0; i < 50; i++) {
+        		Review review = new Review();
+        		review.author = "author"+i;
+        		review.content = "content"+i;
+        		review.cuisine = "cuisine"+i;
+        		review.date = new Date();
+        		review.imageLink = "";
+        		review.link="http://www.fxing.net";
+        		review.location = "location"+i;
+        		review.name = "name"+i;
+        		review.phone = "18600891730";
+        		review.rating = "100%";
+        		results.add(review);
+			}
         } catch (Exception e) {
             Log.e(Constants.LOGTAG, " " + ReviewFetcher.CLASSTAG, e);
         }
