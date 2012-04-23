@@ -1,5 +1,9 @@
 package com.ibookstore;
 
+import org.apache.commons.lang.StringUtils;
+
+import com.ibookstore.util.UITools;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -38,11 +42,33 @@ public class FindBooksCriteriaActivity extends Activity {
 			
 			@Override
 			public void onClick(View paramView) {
-				 
+				handleFindBooks();
 			}
+			
 		});
 		
 	}
 	
+	protected void handleFindBooks() {
+		validateCriteria();
+	}
 	
+	//Validate from Criteria Fields
+	private boolean validateCriteria(){
+		boolean result = false;
+		String tips =""; 
+		if(txt_title.getText() == null || StringUtils.isBlank(txt_title.getText().toString())){
+			tips = "不能为空";
+		}else if (txt_author.getText() == null || StringUtils.isBlank(txt_author.getText().toString()) ){
+			tips = "不能为空";
+		}else if (txt_publisher.getText() == null || StringUtils.isBlank(txt_author.getText().toString()) ){
+			tips = "不能为空";
+	    }else{
+	    	result = true;
+	    }
+		if(result!=true){
+			UITools.openAlertDialogWithOKButton(this,"test",tips);
+		}
+		return result;
+	}
 }
