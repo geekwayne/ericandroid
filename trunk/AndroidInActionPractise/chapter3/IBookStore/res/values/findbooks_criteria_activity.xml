@@ -6,6 +6,7 @@
 <string name="book_category">图书分类：</string>
 <string name="btn_Search">查　询</string>
 <string-array name="bookCategories">
+    <item >全部</item>
     <item >小说</item>
     <item >文艺</item>
     <item >青春</item>
