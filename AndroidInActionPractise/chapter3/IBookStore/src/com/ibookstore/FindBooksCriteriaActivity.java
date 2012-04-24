@@ -6,6 +6,7 @@ import com.ibookstore.data.BookSearchCriteria;
 import com.ibookstore.util.UITools;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -67,7 +68,7 @@ public class FindBooksCriteriaActivity extends Activity {
 		app.setBookSearchCriteria(c);
 		
 		//call list Intent 
-		Intent intent = new Intent(Constants.INTENT_ACTION_VIEW_DETAIL);
+		Intent intent = new Intent(Constants.INTENT_ACTION_VIEW_BOOKLIST);
 		startActivity(intent);
 		
 	}

@@ -24,7 +24,7 @@ public class IBookStoreActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(Constants.INTENT_ACTION_VIEW_DETAIL);
+				Intent intent = new Intent(Constants.INTENT_ACTION_VIEW_FINDBOOKS_CRITERIA);
 				startActivity(intent);
 			}
 			
