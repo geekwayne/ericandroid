@@ -9,9 +9,11 @@ import com.ibookstore.data.BookSearchCriteria;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -57,6 +59,16 @@ public class BookListActivity extends ListActivity {
 		loadBooks();
 	}
 	
+	
+	
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id) {
+		IBookStoreApplication app = (IBookStoreApplication) getApplication();
+		app.setCurrentBook(books.get(position));
+		Intent intent = new Intent(Constants.INTENT_ACTION_VIEW_BOOKDETAIL);
+		startActivity(intent); 
+	}
+
 	private void loadBooks() {
 
         this.progressDialog = ProgressDialog.show(this, " ËÑË÷ÖÐ...", " ÕýÔÚËÑË÷..ÇëÉÔºò..", true, false);

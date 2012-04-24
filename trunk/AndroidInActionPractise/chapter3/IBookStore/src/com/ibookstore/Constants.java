@@ -6,6 +6,8 @@ public class Constants {
     
     public static final String INTENT_ACTION_VIEW_BOOKLIST= "com.ibookstore.action.BOOKLIST";
     
+    public static final String INTENT_ACTION_VIEW_BOOKDETAIL= "com.ibookstore.action.BOOKDETAIL";
+    
     public static final String LOGTAG = "RestaurantFinder";
      
 }
