@@ -35,7 +35,7 @@ public class FindBooksCriteriaActivity extends Activity {
 		txt_publisher  = (EditText) findViewById(R.id.txt_publisher);
 		spinner_book_category = (Spinner)findViewById(R.id.spinner_book_category);
 		btn_findBooks = (Button)findViewById(R.id.btn_findBooks);
-		 
+		
 		ArrayAdapter<String> adapter_bookCategories = new ArrayAdapter<String>(this,R.layout.spinner_view,getResources().getStringArray(R.array.bookCategories));
 		adapter_bookCategories.setDropDownViewResource(R.layout.spinner_view_dropdown);
 		
