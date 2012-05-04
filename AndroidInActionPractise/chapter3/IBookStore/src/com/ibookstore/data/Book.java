@@ -70,7 +70,7 @@ public class Book {
 			Book book = new Book();
 			book.setName("BookName"+i);
 			book.setAuthor("BookAuthor"+i);
-			book.setPublisher("Publisher"+i);
+			book.setPublisher("http://book.dangdang.com");
 			book.setCategory("Category"+i);
 			book.setBookVersion("bookVersion"+i);
 			book.setPublishDate("1990-12-09");
