@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+          style="@style/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/title" />
+
+    <TextView
+         style="@style/field"
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前城市：" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="北京" />
+
+    <TextView
+          style="@style/field"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="温度：" />
+	
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="temp" />
+    
+     <TextView
+           style="@style/field"
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="风向：" />
+	
+    <TextView
+        android:id="@+id/WD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WD" />
+    
+     <TextView
+           style="@style/field"
+        android:id="@+id/textViewWS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="风速：" />
+	
+    <TextView
+        android:id="@+id/WS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WS" />
+    
+     <TextView
+           style="@style/field"
+        android:id="@+id/textViewtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发布时间：" />
+	
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="time" />
+    
+    
+</LinearLayout>
