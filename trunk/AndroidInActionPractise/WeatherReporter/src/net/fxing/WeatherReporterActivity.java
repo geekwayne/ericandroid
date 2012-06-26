@@ -2,22 +2,28 @@ package net.fxing;
 
 import net.fxing.data.WeatherFetcher;
 import net.fxing.data.WeatherInfoInterface1;
+import net.fxing.service.WeatherService;
 
 import org.json.JSONObject;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
 public class WeatherReporterActivity extends Activity {
 
-	JSONObject weatherObject = null;
-
+ 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
+		loadWeather();
+		startService(new Intent(this,WeatherService.class)); 
+	}
+
+	private void loadWeather() {
 		try {
 			WeatherInfoInterface1 weatherInfo = new WeatherFetcher("101010100")
 					.getWeatherInfo1();
@@ -34,4 +40,14 @@ public class WeatherReporterActivity extends Activity {
 		}
 
 	}
+
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		loadWeather();
+	}
+
+	 
+	
 }
